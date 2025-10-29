@@ -1,0 +1,26 @@
+body {
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.text-center py-5 bg-light {
+  background-color: beige;
+}
+
+h1, h2, h5 {
+  color: #0d6efd;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}

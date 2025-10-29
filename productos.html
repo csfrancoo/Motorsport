@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotorSport - Productos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/productos.css">
+</head>
+<body>
+
+  <!-- Navbar con botón de carrito -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html">MotorSport</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
+          <li class="nav-item ms-3">
+            <button class="btn btn-outline-primary position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+              🛒 Carrito
+              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Catálogo -->
+  <section class="container py-5">
+    <h2 class="text-center fw-bold mb-4">Nuestros Autos</h2>
+    <div class="row g-4" id="products-list">
+      <!-- Ejemplos de productos: reemplazá las imágenes por las tuyas -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="../assets/ventoGLI.avif" class="card-img-top" alt="Auto 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Volkswagen Vento GLI</h5>
+            <p class="card-text text-muted" data-price="25000">$25,000.00 USD</p>
+            <button class="btn btn-primary btn-add" 
+                    data-id="p1" data-name="Volkswagen Vento GLI" data-price="25000" data-img="../assets/ventoGLI.avif">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="../assets/ToyotaSw4.jpg" class="card-img-top" alt="Auto 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Toyota SW4</h5>
+            <p class="card-text text-muted" data-price="22500">$22,500.00 USD</p>
+            <button class="btn btn-primary btn-add" 
+                    data-id="p2" data-name="Toyota SW4" data-price="22500" data-img="../assets/ToyotaSw4.jpg">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="../assets/ToyotaHiluxGR.jpg" class="card-img-top" alt="Auto 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Toyota Hilux GR</h5>
+            <p class="card-text text-muted" data-price="23800">$23,800.00 USD</p>
+            <button class="btn btn-primary btn-add" 
+                    data-id="p3" data-name="Toyota Hilux GR" data-price="23800" data-img="../assets/ToyotaHiluxGR.jpg">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Podés duplicar/block copiar más tarjetas con data-id distintos -->
+    </div>
+  </section>
+
+  <!-- Offcanvas: Carrito -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartOffcanvasLabel">Tu carrito</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cart-items" class="mb-3">
+        <!-- Items del carrito se generan aquí -->
+      </div>
+
+      <div class="mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <strong>Total:</strong>
+          <span id="cart-total">$0.00 USD</span>
+        </div>
+        <button id="checkout-btn" class="btn btn-success w-100 mb-2">Finalizar compra</button>
+        <button id="clear-cart-btn" class="btn btn-outline-danger w-100">Vaciar carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-light mt-5 border-top">
+    <p class="mb-0 text-muted">© 2025 MotorSport. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JS/script.js"></script>
+</body>
+</html>
